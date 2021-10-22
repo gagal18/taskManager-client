@@ -4,15 +4,15 @@ const baseURL = 'https://task-api-manager-bojan.herokuapp.com/api/v1/tasks/'
 const Task = (props) => {
     const deleteTask = (id) => {
         axios.delete(baseURL + id).then(
-console.log('deleted')
-          )
+            window.location.reload(false)
+        )
     }
-    return(
+    return (
         <h1>
             {props.name}
             <Link to={props.idTask} >EDIT</Link>
-            <button onClick={()=> {deleteTask(props.idTask)}}>DELETE</button>
+            <button onClick={() => { deleteTask(props.idTask) }}>DELETE</button>
         </h1>
     )
 }
-export default Task 
+export default Task

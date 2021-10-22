@@ -13,6 +13,7 @@ const TaskList = () => {
           });
         
     }, [])
+    console.log(Data)
     return (
         <div>
             <TaskInput method="POST" hide={true} id={''} />

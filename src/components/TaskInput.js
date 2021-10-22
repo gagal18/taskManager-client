@@ -34,6 +34,7 @@ const TaskInput = (props) => {
         axios({ method: met, url: baseURL, data: pass })
             .then((res) => {
                 console.log(res)
+                window.location.reload(false);
             });
         setInput('')
     }

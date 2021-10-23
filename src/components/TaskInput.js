@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 import axios from 'axios'
 
@@ -51,8 +54,8 @@ const TaskInput = (props) => {
     return (
         <div>
             <h1>{props.idTask}</h1>
-            <input type='text' placeholder='Write your task...' value={Input} onChange={(e) => { enter(e.target.value) }} />
-            <button onClick={() => { sendTask(Input, props.method, Check) }}>Submit</button>
+            <TextField  id="outlined-basic" label="Outlined" variant="outlined" type='text' placeholder='Write your task...' value={Input} onChange={(e) => { enter(e.target.value) }} />
+            <Button variant="contained" onClick={() => { sendTask(Input, props.method, Check) }}>Submit</Button>
             {checkCompleted}
         </div>
     )

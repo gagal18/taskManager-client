@@ -13,7 +13,7 @@ const TaskSingle = () => {
         axios.get(baseURL).then((res) => {
             setData(res.data.task)
         });
-
+// eslint-disable-next-line
     }, [])
 
     var task
